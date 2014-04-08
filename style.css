@@ -2,10 +2,24 @@ body {
 
 }
 
-div {
+/*
+ * div {
 	outline: 1px solid gray;
 }
 
 img {
 	width: 100%;
+}
+ */
+
+.row {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+@media only screen
+and (max-width :320px){
+	body{
+		background-color:red;
+	}
 }
