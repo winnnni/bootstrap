@@ -2,7 +2,12 @@
  * @author
  */
 
-var video = "<iframe width=560' height='315' src='http://www.youtube.com/embed/o2-RXqU4Lg8?html5=1' frameborder='0' allowfullscreen></iframe>";
+var moreInfo = {
+	
+	"cycloneInfo":"This is extra informaiton about the cyclone.",
+	"wonderwheelInfo":"This is extra info about the Wonder Wheel.",
+	"parachuteInfo":"This is extra info about the parachute.",
+	}
 
 //Document ready. When the page laods, set up our navigation
 $(document).ready(function() {
@@ -10,12 +15,12 @@ $(document).ready(function() {
 });
 
 function setNav(){
-	$(".cyclone").on("click", function() {
-		$('#myModal').modal();	
-		$('.modal-body').html(video);
-	});
-	
-	$(".close").on("click", function(){
-		$('.modal-body').empty();
+	$('.btn-success').on("click", function(e) {
+		console.log(e.target.id);
+		var myID = e.target.id;
+		
+		$("#"+myID+"Div").append(moreInfo[myID+"Info"]);
+//e.target.id is jQuery
+		console.log(e.target.parentNode);
 	});
 }
